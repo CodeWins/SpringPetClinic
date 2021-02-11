@@ -15,6 +15,11 @@ public class Pet {
         return petType;
     }
 
+    /**
+     *
+     * @param petType
+     */
+
     public void setPetType(PetType petType) {
         this.petType = petType;
     }
