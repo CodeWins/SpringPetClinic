@@ -3,7 +3,7 @@ package iva.springframework.sfgpetclinic.model;
 /**
  * Created By Iva on 2/10/2021.
  */
-public class PetType {
+public class PetType extends BaseEntity{
     private String name;
 
     public String getName() {
