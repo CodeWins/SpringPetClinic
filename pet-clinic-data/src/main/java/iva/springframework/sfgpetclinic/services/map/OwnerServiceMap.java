@@ -2,12 +2,14 @@ package iva.springframework.sfgpetclinic.services.map;
 
 import iva.springframework.sfgpetclinic.model.Owner;
 import iva.springframework.sfgpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 /**
  * Created By iVa on 2/15/2021.
  */
+@Service
 public class OwnerServiceMap extends AbstractMapService <Owner, Long> implements OwnerService{
     @Override
     public Set<Owner> findAll() {
