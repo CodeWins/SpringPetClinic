@@ -1,14 +1,14 @@
 package iva.springframework.sfgpetclinic.services.map;
 
 import iva.springframework.sfgpetclinic.model.Vet;
-import iva.springframework.sfgpetclinic.services.CrudService;
+import iva.springframework.sfgpetclinic.services.VetService;
 
 import java.util.Set;
 
 /**
  * Created By iVa on 2/15/2021.
  */
-public class VetServiceMap extends  AbstractMapService<Vet,Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends  AbstractMapService<Vet,Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();

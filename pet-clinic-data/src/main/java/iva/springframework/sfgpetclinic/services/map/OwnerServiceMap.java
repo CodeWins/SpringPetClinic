@@ -1,14 +1,14 @@
 package iva.springframework.sfgpetclinic.services.map;
 
 import iva.springframework.sfgpetclinic.model.Owner;
-import iva.springframework.sfgpetclinic.services.CrudService;
+import iva.springframework.sfgpetclinic.services.OwnerService;
 
 import java.util.Set;
 
 /**
  * Created By iVa on 2/15/2021.
  */
-public class OwnerServiceMap extends AbstractMapService <Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService <Owner, Long> implements OwnerService{
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
@@ -36,4 +36,8 @@ public class OwnerServiceMap extends AbstractMapService <Owner, Long> implements
     }
 
 
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
+    }
 }
