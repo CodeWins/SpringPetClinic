@@ -1,6 +1,7 @@
 package iva.springframework.sfgpetclinic.bootstrap;
 
 import iva.springframework.sfgpetclinic.model.Owner;
+import iva.springframework.sfgpetclinic.model.Pet;
 import iva.springframework.sfgpetclinic.model.PetType;
 import iva.springframework.sfgpetclinic.model.Vet;
 import iva.springframework.sfgpetclinic.services.OwnerService;
@@ -8,6 +9,8 @@ import iva.springframework.sfgpetclinic.services.PetTypeService;
 import iva.springframework.sfgpetclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 /**
  * Created By iVa on 2/17/2021.
@@ -40,12 +43,33 @@ public class DataLoader implements CommandLineRunner {
 //        owner1.setId(1L);
         owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
+        owner1.setAddress("123 Young st");
+        owner1.setCity("Toronto");
+        owner1.setTelephone("12316223");
+
+        Pet mikesPet = new Pet();
+        mikesPet.setPetType(savedDogPetType);
+        mikesPet.setOwner(owner1);
+        mikesPet.setBirthDate(LocalDate.now());
+        mikesPet.setName("Rosco");
+
+        owner1.getPets().add(mikesPet);
+
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
 //        owner2.setId(2L);
         owner2.setFirstName("Fiona");
         owner2.setLastName("Glenne");
+        owner2.setAddress("325 Finch st");
+        owner2.setCity("Toronto");
+        owner2.setTelephone("23523623");
+        Pet fionasPet = new Pet();
+        fionasPet.setPetType(savedDogPetType);
+        fionasPet.setOwner(owner2);
+        fionasPet.setBirthDate(LocalDate.now());
+        fionasPet.setName("Just Cat");
+
         ownerService.save(owner2);
 
         System.out.println("Loaded Owners.... ");
