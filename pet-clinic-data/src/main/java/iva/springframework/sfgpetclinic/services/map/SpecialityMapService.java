@@ -1,14 +1,16 @@
 package iva.springframework.sfgpetclinic.services.map;
 
 import iva.springframework.sfgpetclinic.model.Speciality;
-import iva.springframework.sfgpetclinic.services.SpecialtiesService;
+import iva.springframework.sfgpetclinic.services.SpecialtyService;
+import org.springframework.stereotype.Component;
 
 import java.util.Set;
 
 /**
  * Created By iVa on 3/6/2021.
  */
-public class SpecialityMapService extends AbstractMapService<Speciality,Long> implements SpecialtiesService {
+@Component
+public class SpecialityMapService extends AbstractMapService<Speciality,Long> implements SpecialtyService {
     @Override
     public Set<Speciality> findAll() {
         return super.findAll();
