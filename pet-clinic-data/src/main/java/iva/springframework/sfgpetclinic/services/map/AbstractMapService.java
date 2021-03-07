@@ -1,12 +1,14 @@
 package iva.springframework.sfgpetclinic.services.map;
 
 import iva.springframework.sfgpetclinic.model.BaseEntity;
+import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 /**
  * Created By iVa on 2/15/2021.
  */
+@Service
 public abstract class AbstractMapService <T extends BaseEntity,ID extends Long> {
     protected Map<Long, T> map = new HashMap<>();
 
